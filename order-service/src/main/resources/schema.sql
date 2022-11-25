@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `FoodToGo`.`customerOrder` (
     `canceled_reason` LONGTEXT NULL,
     `delivered` TINYINT NULL,
     `customer_id` INT NOT NULL,
-    `resturant_id` INT NOT NULL,
+    `restaurant_id` INT NOT NULL,
     `feedback_id` INT NULL,
     `employee_id` INT NULL,
     PRIMARY KEY (`customerOrder_id`),

@@ -41,8 +41,8 @@ public class order {
     @Column(name = "customer_id", nullable = false)
     private Long customer_id;
 
-    @Column(name = "resturant_id", nullable = false)
-    private Long resturant_id;
+    @Column(name = "restaurant_id", nullable = false)
+    private Long restaurant_id;
 
     @Column(name = "feedback_id")
     private Long feedback_id;
@@ -114,12 +114,12 @@ public class order {
         this.customer_id = customer_id;
     }
 
-    public Long getResturant_id() {
-        return resturant_id;
+    public Long getRestaurant_id() {
+        return restaurant_id;
     }
 
-    public void setResturant_id(Long resturant_id) {
-        this.resturant_id = resturant_id;
+    public void setRestaurant_id(Long restaurant_id) {
+        this.restaurant_id = restaurant_id;
     }
 
     public Long getFeedback_id() {
