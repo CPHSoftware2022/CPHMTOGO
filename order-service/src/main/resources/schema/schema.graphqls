@@ -7,7 +7,7 @@ type Order {
     canceled_reason: String!
     delivered: Boolean!
     customer_id: Int!
-    resturant_id: Int!
+    restaurant_id: Int!
     feedback_id: Int!
     employee_id: Int!
     items: [Item]
@@ -16,4 +16,10 @@ type Order {
 type Item{
     id: ID!
     item_id: Int!
+}
+
+type Query {
+    orders: Order
+    ordersPagination(amount: Int): Order
+    orderById(id: ID): Order
 }
