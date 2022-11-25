@@ -1,0 +1,19 @@
+type Order {
+    id: ID!
+    order_start: String!
+    order_end: String!
+    total_price: Float!
+    accepted: Boolean!
+    canceled_reason: String!
+    delivered: Boolean!
+    customer_id: Int!
+    resturant_id: Int!
+    feedback_id: Int!
+    employee_id: Int!
+    items: [Item]
+}
+
+type Item{
+    id: ID!
+    item_id: Int!
+}
