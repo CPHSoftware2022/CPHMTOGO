@@ -1,12 +1,14 @@
 type Query {
-    feedbacks: [Feedback]
-    feedbackById(feedbackId: ID!): Feedback
-    feedbacksByCourierId(courierId: ID!): [Feedback]
-    feedbacksByCustomerIdAndRestaurantId(customerId: ID!, restaurantId: ID!): [Feedback]
+    findAllFeedbacks: [Feedback]!
+    countFeedbacks: Float!
+#    feedbackById(feedbackId: ID!): Feedback
+#    feedbacksByCourierId(courierId: ID!): [Feedback]
+#    feedbacksByCustomerIdAndRestaurantId(customerId: ID!, restaurantId: ID!): [Feedback]
 }
 
 type Mutation {
-    addFeedback(feedback: FeedbackInput): Feedback
+#    addFeedback(feedback: FeedbackInput): Feedback
+    createFeedback(feedback: FeedbackInput): Feedback!
 }
 
 input FeedbackInput {

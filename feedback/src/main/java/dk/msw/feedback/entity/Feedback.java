@@ -1,22 +1,29 @@
 package dk.msw.feedback.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Feedback {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long feedbackId;
+    @Column(name = "customer_id")
     private Long customerId;
+    @Column(name = "restaurant_id")
     private Long restaurantId;
+    @Column(name = "courier_id")
     private Long courierId;
+    @Column(name = "title")
     private String title;
+    @Column(name = "food_rating")
     private int foodRating;
+    @Column(name = "courier_rating")
     private int courierRating;
+    @Column(name = "overall_rating")
     private int overallRating;
+    @Column(name = "description")
     private String description;
+
 
     public Feedback(Long customerId, Long restaurantId, Long courierId,
                     String title, int foodRating, int courierRating, int overallRating, String description) {
@@ -99,5 +106,20 @@ public class Feedback {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Feedback{" +
+                "feedbackId=" + feedbackId +
+                ", customerId=" + customerId +
+                ", restaurantId=" + restaurantId +
+                ", courierId=" + courierId +
+                ", title='" + title + '\'' +
+                ", foodRating=" + foodRating +
+                ", courierRating=" + courierRating +
+                ", overallRating=" + overallRating +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
